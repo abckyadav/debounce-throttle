@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./debounce.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navimg">
+        <img src="https://i.ibb.co/tpfyx22/imageedit-4-5461445329.png" alt="" />
+      </div>
+      <div class="head">
+        <h1><span>M</span>ovies <span>A</span>dda</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <input
+        oninput="debounce(searchMovie, 1000)"
+        type="text"
+        id="movie"
+        placeholder="Search Movies Here"
+      />
+      <div id="searchDiv"></div>
+    </div>
+
+    <div id="contentDiv"></div>
+  </body>
+</html>
+<script src="./debounce.js"></script>

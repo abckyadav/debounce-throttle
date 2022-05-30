@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(16, 8, 61);
+  color: white;
+}
+.navimg > img {
+  width: 100%;
+  height: 100%;
+}
+.navimg {
+  width: 18%;
+  /* border: 1px solid red; */
+  margin-left: 5%;
+}
+.navbar {
+  display: flex;
+  height: 100px;
+  border-bottom: 1px solid rgba(228, 205, 205, 0.5);
+}
+
+.head {
+  margin: auto;
+  margin-left: 20%;
+}
+span {
+  color: red;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(252, 246, 246, 0.712);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#searchDiv {
+  width: 100%;
+  height: 150px;
+  overflow: auto;
+  border: 1px solid rgba(128, 128, 128);
+  display: none;
+}
+.container {
+  width: 30%;
+  margin: 50px auto;
+  /* border: 1px solid green; */
+}
+
+#contentDiv {
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+  width: 50%;
+  gap: 5%;
+  line-height: 50px;
+  /* border: 1px solid red; */
+}
+#img_div > img {
+  width: 100%;
+  height: 100%;
+}
+#text_div {
+  /* border: 5px solid rgb(21, 255, 0); */
+  width: 40%;
+  margin: 50px auto;
+  font-size: x-large;
+}

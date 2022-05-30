@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="btn">Increase count using throttling in 2 second</button>
+    <p id="count">1</p>
+  </body>
+</html>
+<script>
+  function tog() {
+    let count = document.getElementById("count").textContent || 0;
+    count = +count + 1;
+    console.log(count);
+    document.getElementById("count").textContent = count;
+  }
+  let timerId;
+  function toggler(func, delay) {
+    if (timerId) {
+      return;
+    }
+    timerId = setTimeout(function () {
+      func();
+      timerId = undefined;
+    }, delay);
+  }
+  document.getElementById("btn").addEventListener("click", function () {
+    toggler(tog, 2000);
+  });
+</script>
+
+<!-- 
+  Throttling or sometimes is also called throttle function is a practice used in
+websites. Throttling is used to call a function after every "x" millisecond or a
+particular interval of time only the first click is executed immediately! 
+
+
+What is difference between throttling and Debouncing in JavaScript? 
+
+The difference between debouncing and throttling is that debounce calls a function when a user
+hasn't carried out an event in a specific amount of time, 
+
+while throttle calls a function at intervals of a specified amount of time while the user is
+carrying out an event.  
+-->
